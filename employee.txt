@@ -1,0 +1,33 @@
+Define a class ‘employee’ with data members empid, name and salary.
+Accept data for two employee and display details.
+import java.util.*;
+class employee{
+	int empid;
+	String name;
+	int salary;
+	Scanner sc = new Scanner(System.in);
+	public void get_data() {
+		System.out.println("Enter the employee id: ");
+		empid = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter the name of employee: ");
+		name = sc.nextLine();
+		System.out.println("Enter the salary of the employee: ");
+		salary = sc.nextInt();
+	}
+	public void disp() {
+		System.out.println("Employee Id: " + empid);
+		System.out.println("Employee Name: " + name);
+		System.out.println("Employee Salary: "+ salary);
+	}
+}
+class Main{
+	public static void main(String[] args) {
+		employee emp = new employee();
+		employee emp1 = new employee();
+		emp.get_data();
+		emp1.get_data();
+		emp.disp();
+		emp1.disp();
+	}
+}
